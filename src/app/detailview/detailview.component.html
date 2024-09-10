@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Player List</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let player of players">
+        <div class="card" [ngStyle]="{ 'background-color': getTeamColor(player.team).bgColor, 'color': getTeamColor(player.team).textColor }">
+          <div class="card-body">
+            <h5 class="card-title">{{ player.fullName }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ player.team }}</h6>
+            <p class="card-text">
+              <strong>Date of Birth:</strong> {{ player.dob | dateformat }}<br>
+              <strong>Runs:</strong> {{ player.runs }}<br>
+              <strong>Sixes:</strong> {{ player.sixes }}<br>
+              <strong>100s:</strong> {{ player.hundreds }}<br>
+              <strong>50s:</strong> {{ player.fifties }}
+            </p>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-danger" (click)="deletePlayer(player.id)">Delete</button>
+                <button class="btn btn-secondary" (click)="goBack()">Back</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

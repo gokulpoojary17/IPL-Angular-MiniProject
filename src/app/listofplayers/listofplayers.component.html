@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Player List</h2>
+    <table class="table table-bordered" >
+      <thead>
+        <tr>
+          <th>Player Name</th>
+          <th>Team</th>
+          <th>Date of Birth</th>
+          <th>Batting Style</th>
+          <th>Role</th>
+          <th>Runs</th>
+          <th>Sixes</th>
+          <th>100s</th>
+          <th>50s</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of players" [ngStyle]="{ 'background-color': getTeamColor(player.team).bgColor, 'color': getTeamColor(player.team).textColor }">
+          <td>{{ player.fullName }}</td>
+          <td>{{ player.team }}</td>
+          <td>{{ player.dob | dateformat }}</td>
+          <td>{{player.battingStyle}}</td>
+          <td>{{ player.role }}</td>
+          <td>{{ player.runs }}</td>
+          <td>{{ player.sixes }}</td>
+          <td>{{ player.hundreds }}</td>
+          <td>{{ player.fifties }}</td>
+          <td>
+            <button class="btn btn-primary" [routerLink]="['/edit-player', player.id]">Edit</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

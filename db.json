@@ -1,0 +1,68 @@
+{
+  "players": [
+    {
+      "fullName": "ushap",
+      "team": "Chennai Super Kings",
+      "dob": "01-12-2002",
+      "role": "bowler",
+      "runs": 1,
+      "sixes": 1,
+      "hundreds": 1,
+      "fifties": 3,
+      "battingStyle": "Right Hand",
+      "id": "da4b"
+    },
+    {
+      "id": "4bd1",
+      "fullName": "gokulaa",
+      "sixes": 23,
+      "runs": 2343,
+      "hundreds": 3,
+      "fifties": 11,
+      "team": "royal challengers bangalore",
+      "dob": "2024-08-10",
+      "role": "bowler",
+      "battingStyle": "Right Hand"
+    },
+    {
+      "id": "6935",
+      "fullName": "prabhakar",
+      "dob": "01-12-2002",
+      "battingStyle": "Right Hand",
+      "role": "bowler",
+      "team": "Mumbai Indians",
+      "matches": 200,
+      "sixes": 28,
+      "fours": 26,
+      "runs": 25,
+      "hundreds": 554,
+      "fifties": 23333
+    },
+    {
+      "id": "4f09",
+      "fullName": "omkar",
+      "dob": "01-12-2002",
+      "battingStyle": "Left Hand",
+      "role": "bowler",
+      "team": "Kolkata Knight Riders",
+      "matches": 20,
+      "sixes": 2,
+      "fours": 21,
+      "runs": 12,
+      "hundreds": 12,
+      "fifties": 1
+    },
+    {
+      "fullName": "gokul",
+      "team": "royal challengers bangalore",
+      "dob": "01-12-2002",
+      "role": "bowler",
+      "runs": 12,
+      "sixes": 1,
+      "hundreds": 1,
+      "fifties": 1,
+      "battingStyle": "Right Hand",
+      "id": "4d49"
+    }
+  ]
+}

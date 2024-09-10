@@ -1,0 +1,20 @@
+.card {
+    margin-bottom: 20px; /* Adds space between cards */
+  }
+  
+  .card-body {
+    padding: 15px; /* Adds padding inside the card */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Adjusts the font size of the card title */
+  }
+  
+  .card-subtitle {
+    font-size: 1rem; /* Adjusts the font size of the card subtitle */
+  }
+  
+  .card-text {
+    font-size: 0.875rem; /* Adjusts the font size of the card text */
+  }
+  

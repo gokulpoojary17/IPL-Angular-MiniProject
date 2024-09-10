@@ -1,0 +1,12 @@
+.container{
+    width: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border:  black  1px solid;
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+}

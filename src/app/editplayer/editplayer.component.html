@@ -1,0 +1,190 @@
+<div class="container">
+    <h2>Edit Player</h2>
+    <form [formGroup]="playerForm" (ngSubmit)="updatePlayer()">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input id="fullName" class="form-control" formControlName="fullName" />
+        <div *ngIf="playerForm.controls['fullName'].invalid && playerForm.controls['fullName'].touched" class="text-danger">
+          Full Name is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="team">Team:</label>
+        <input id="team" class="form-control" formControlName="team" />
+        <div *ngIf="playerForm.controls['team'].invalid && playerForm.controls['team'].touched" class="text-danger">
+          Team is required.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" class="form-control" formControlName="dob" />
+        <div *ngIf="playerForm.controls['dob'].invalid && playerForm.controls['dob'].touched" class="text-danger">
+          Date of Birth is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="batting">Batting Style <span class="text-danger">*</span></label>
+        <select class="form-control" id="batting" formControlName="battingStyle">
+          <option value="">Select Batting Style</option>
+          <option value="Right Hand">Right Hand</option>
+          <option value="Left Hand">Left Hand</option>
+        </select>
+        <div *ngIf="playerForm.controls['battingStyle'].invalid && playerForm.controls['battingStyle'].touched" class="text-danger">
+          <small>Batting Style is required.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="role">Role <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" id="role" formControlName="role">
+        <div *ngIf="playerForm.controls['role'].invalid && playerForm.controls['role'].touched" class="text-danger">
+          <small>Role is required.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="team">Team <span class="text-danger">*</span></label>
+        <select class="form-control" id="team" formControlName="team">
+          <option *ngFor="let team of teams" [value]="team.name">{{ team.name }}</option>
+        </select>
+        <div *ngIf="playerForm.controls['team'].invalid && playerForm.controls['team'].touched" class="text-danger">
+          <small>Team is required.</small>
+        </div>
+      </div>
+      <!-- Other fields: runs, sixes, hundreds, fifties -->
+  
+      <div class="form-group">
+        <label for="runs">Runs:</label>
+        <input id="runs" type="number" class="form-control" formControlName="runs" />
+        <div *ngIf="playerForm.controls['runs'].invalid && playerForm.controls['runs'].touched" class="text-danger">
+          Runs is required and must be a non-negative number.
+        </div>
+      </div>
+  
+      <!-- Add other fields similarly -->
+  
+      <div class="form-group d-flex justify-content-end mt-3">
+        <button type="button" class="btn btn-secondary me-2" (click)="goBack()">Back</button>
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+    </form>
+  </div>
+  
+
+
+
+<!-- 
+
+ <div class="container mt-4">
+    <h2>Add Player</h2>
+    <form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+      <div class="card mb-4">
+        <div class="card-header">Player Details</div>
+        <div class="card-body">
+          <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" formControlName="fullName" class="form-control">
+              <div *ngIf="playerForm.get('fullName')?.invalid && playerForm.get('fullName')?.touched">
+                <small class="text-danger" *ngIf="playerForm.get('fullName')?.errors?.['required']">
+                  Full Name is required.
+                </small>
+                <small class="text-danger" *ngIf="playerForm.get('fullName')?.errors?.['pattern']">
+                  Full Name must contain only letters.
+                </small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="text" id="dob" formControlName="dob" class="form-control">
+              <div *ngIf="playerForm.get('dob')?.invalid && playerForm.get('dob')?.touched">
+                <small class="text-danger" *ngIf="playerForm.get('dob')?.errors?.['required']">
+                  Date of Birth is required.
+                </small>
+                <small class="text-danger" *ngIf="playerForm.get('dob')?.errors?.['invalidDate']">
+                  Date format must be 'dd-mm-yyyy'.
+                </small>
+              </div>
+            </div>
+        
+          <div class="form-group">
+            <label for="batting">Batting Style <span class="text-danger">*</span></label>
+            <select class="form-control" id="batting" formControlName="battingStyle">
+              <option value="">Select Batting Style</option>
+              <option value="Right Hand">Right Hand</option>
+              <option value="Left Hand">Left Hand</option>
+            </select>
+            <div *ngIf="playerForm.get('battingStyle')?.invalid && playerForm.get('battingStyle')?.touched" class="text-danger">
+              <small>Batting Style is required.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="role">Role <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="role" formControlName="role">
+            <div *ngIf="playerForm.get('role')?.invalid && playerForm.get('role')?.touched" class="text-danger">
+              <small>Role is required.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="team">Team <span class="text-danger">*</span></label>
+            <select class="form-control" id="team" formControlName="team">
+              <option *ngFor="let team of teams" [value]="team.name">{{ team.name }}</option>
+            </select>
+            <div *ngIf="playerForm.get('team')?.invalid && playerForm.get('team')?.touched" class="text-danger">
+              <small>Team is required.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card mb-4">
+        <div class="card-header">Player Statistics</div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="matches">Number of Matches <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="matches" formControlName="matches">
+            <div *ngIf="playerForm.get('matches')?.invalid && playerForm.get('matches')?.touched" class="text-danger">
+              <small>Number of Matches is required and must be greater than 0.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sixes">Number of Sixes <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="sixes" formControlName="sixes">
+            <div *ngIf="playerForm.get('sixes')?.invalid && playerForm.get('sixes')?.touched" class="text-danger">
+              <small>Number of Sixes is required and must be 0 or greater.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fours">Number of Fours <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="fours" formControlName="fours">
+            <div *ngIf="playerForm.get('fours')?.invalid && playerForm.get('fours')?.touched" class="text-danger">
+              <small>Number of Fours is required and must be 0 or greater.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="runs">Runs Scored <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="runs" formControlName="runs">
+            <div *ngIf="playerForm.get('runs')?.invalid && playerForm.get('runs')?.touched" class="text-danger">
+              <small>Runs Scored is required and must be 0 or greater.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hundreds">Number of Hundreds <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="hundreds" formControlName="hundreds">
+            <div *ngIf="playerForm.get('hundreds')?.invalid && playerForm.get('hundreds')?.touched" class="text-danger">
+              <small>Number of Hundreds is required and must be 0 or greater.</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fifties">Number of Fifties <span class="text-danger">*</span></label>
+            <input type="number" class="form-control" id="fifties" formControlName="fifties">
+            <div *ngIf="playerForm.get('fifties')?.invalid && playerForm.get('fifties')?.touched" class="text-danger">
+              <small>Number of Fifties is required and must be 0 or greater.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    
+    </form>
+  </div>
+   -->

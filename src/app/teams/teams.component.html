@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>IPL Teams</h2>
+    <table class="table table-bordered table-striped " style="border: 1px black solid;">
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>Jersey Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of teams">
+          <td>{{ team.name }}</td>
+          <td>
+            <div [style.background-color]="team.jerseyColor" style="width: 100px; height: 20px;"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
