@@ -1,0 +1,13 @@
+{
+    "builds": [
+      {
+        "src": "dist/<project6new>/**",
+        "use": "@vercel/static"
+      }
+    ]
+  ,
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ]
+  }
+  
