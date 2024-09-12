@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Player List</h2>
-    <table class="table table-bordered" >
+    <table  datatable [dtOptions]="dtoptions" [dtTrigger]="dttrigger"  class="table table-bordered"  >
       <thead>
         <tr>
           <th>Player Name</th>
@@ -12,6 +12,7 @@
           <th>Sixes</th>
           <th>100s</th>
           <th>50s</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>

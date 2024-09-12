@@ -13,7 +13,67 @@
       "id": "da4b"
     },
     {
+      "fullName": "ushap",
+      "team": "Chennai Super Kings",
+      "dob": "01-12-2002",
+      "role": "bowler",
+      "runs": 1,
+      "sixes": 1,
+      "hundreds": 1,
+      "fifties": 3,
+      "battingStyle": "Right Hand",
+      "id": "da5b"
+    },
+    {
+      "fullName": "ushap",
+      "team": "Chennai Super Kings",
+      "dob": "01-12-2002",
+      "role": "bowler",
+      "runs": 1,
+      "sixes": 1,
+      "hundreds": 1,
+      "fifties": 3,
+      "battingStyle": "Right Hand",
+      "id": "da6b"
+    },
+    {
+      "fullName": "ushap",
+      "team": "Chennai Super Kings",
+      "dob": "01-12-2002",
+      "role": "bowler",
+      "runs": 1,
+      "sixes": 1,
+      "hundreds": 1,
+      "fifties": 3,
+      "battingStyle": "Right Hand",
+      "id": "da7b"
+    },
+    {
+      "fullName": "ushap",
+      "team": "Chennai Super Kings",
+      "dob": "01-12-2002",
+      "role": "bowler",
+      "runs": 1,
+      "sixes": 1,
+      "hundreds": 1,
+      "fifties": 3,
+      "battingStyle": "Right Hand",
+      "id": "da8b"
+    },
+    {
       "id": "4bd1",
+      "fullName": "gokulaa",
+      "sixes": 23,
+      "runs": 2343,
+      "hundreds": 3,
+      "fifties": 11,
+      "team": "royal challengers bangalore",
+      "dob": "2024-08-10",
+      "role": "bowler",
+      "battingStyle": "Right Hand"
+    },
+    {
+      "id": "4bd2",
       "fullName": "gokulaa",
       "sixes": 23,
       "runs": 2343,
@@ -39,18 +99,16 @@
       "fifties": 23333
     },
     {
-      "id": "4f09",
-      "fullName": "omkar",
-      "dob": "01-12-2002",
-      "battingStyle": "Left Hand",
-      "role": "bowler",
+      "fullName": "omkars",
       "team": "Kolkata Knight Riders",
-      "matches": 20,
-      "sixes": 2,
-      "fours": 21,
+      "dob": "01-12-2002",
+      "role": "bowler",
       "runs": 12,
+      "sixes": 2,
       "hundreds": 12,
-      "fifties": 1
+      "fifties": 1,
+      "battingStyle": "Left Hand",
+      "id": "4f09"
     },
     {
       "fullName": "gokul",
@@ -63,6 +121,20 @@
       "fifties": 1,
       "battingStyle": "Right Hand",
       "id": "4d49"
+    },
+    {
+      "id": "cf8a",
+      "fullName": "gokul",
+      "dob": "01-12-2002",
+      "battingStyle": "Right Hand",
+      "role": "bowler",
+      "team": "Mumbai Indians",
+      "matches": 8,
+      "sixes": 8,
+      "fours": 8,
+      "runs": 899,
+      "hundreds": 2,
+      "fifties": 2
     }
   ]
 }

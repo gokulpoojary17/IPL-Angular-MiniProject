@@ -15,6 +15,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { TopscoresComponent } from './topscores/topscores.component';
 import { TophundredsComponent } from './tophundreds/tophundreds.component';
 import { TopfiftiesComponent } from './topfifties/topfifties.component';
+import { DataTablesModule } from 'angular-datatables';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { TopfiftiesComponent } from './topfifties/topfifties.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
